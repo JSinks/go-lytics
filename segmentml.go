@@ -6,6 +6,11 @@ const (
 	segmentMLDepEndpoint  = "segmentml/:id/_dependencies"
 )
 
+var (
+	// Ensure we can write out as a table
+	_ TableWriter = (*Segment)(nil)
+)
+
 type Feature struct {
 	Kind        string  `json:"kind, omitempty"`
 	Type        string  `json:"type, omitempty"`
